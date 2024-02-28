@@ -15,7 +15,7 @@ RUN tar -zxvf 5stems.tar.gz -C /opt/JumpCutter2/JumpCutter2/pretrained_models/5s
 
 WORKDIR /opt/JumpCutter2
 RUN rm -rf /root/tmp
-RUN pip install --install-option="--jobs=2" .
+RUN MAKEFLAGS="-j$(nproc)" pip install .
 RUN pip install -r requirements.txt
 RUN pip cache info
 RUN python -m JumpCutter2 -h

@@ -4,7 +4,7 @@ MAINTAINER lambdaexpression <lambdaexpression@163.com>
 
 WORKDIR /root/tmp
 RUN apk update
-RUN apk add --update --no-cache curl jq py3-configobj py3-pip py3-setuptools python3 python3-dev zip unzip wget ffmpeg gcc gcc-c++
+RUN apk add --update --no-cache curl jq py3-configobj py3-pip py3-setuptools python3 python3-dev zip unzip wget ffmpeg gcc g++
 RUN wget https://github.com/LambdaExpression/JumpCutter2/archive/refs/heads/master.zip
 RUN unzip -d /opt master.zip
 RUN mv /opt/JumpCutter2-master /opt/JumpCutter2
